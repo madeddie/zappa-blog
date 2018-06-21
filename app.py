@@ -62,7 +62,7 @@ def item(category, item_slug):
 
     try:
         path = category + '/' + item_slug + '.md'
-        html = markdown2.markdown_path(path, extras=["metadata"])
+        html = markdown2.markdown_path(path, extras=["metadata", "fenced-code-blocks"])
 
         metadata = html.metadata
         if 'template' in metadata.keys():
